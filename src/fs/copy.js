@@ -1,13 +1,10 @@
 import * as fs from "node:fs";
+import { failFn } from "./utils.js";
 
 const copy = async () => {
   // Write your code here
   const filesDir = "./files";
   const filesCopyDir = "./files_copy";
-
-  function failFn() {
-    return console.error("FS operation failed");
-  }
 
   const isFilesDirPresent = fs.existsSync("./files");
   const isFilesCopyDirPresent = fs.existsSync(filesCopyDir);

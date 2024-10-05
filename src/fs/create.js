@@ -1,11 +1,8 @@
 import * as fs from "node:fs";
+import { failFn } from "./utils.js";
 
 const create = async () => {
   // Write your code here
-
-  function failFn() {
-    return console.error("FS operation failed");
-  }
 
   if (fs.existsSync("./files/fresh.txt")) {
     return failFn();
