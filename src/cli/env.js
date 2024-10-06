@@ -1,5 +1,8 @@
 const parseEnv = () => {
   // Write your code here
+
+  // Run this command "npm run cli:env" in the terminal.
+
   process.env.RSS_name1 = "value1";
   process.env.RSS_name2 = "value2";
 
