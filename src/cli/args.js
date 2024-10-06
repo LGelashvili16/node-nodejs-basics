@@ -1,8 +1,6 @@
 const parseArgs = () => {
   // Write your code here
 
-  // Run this command "npm run cli:args" in the terminal.
-
   let obj = {};
   const clArguments = process.argv.slice(2);
 

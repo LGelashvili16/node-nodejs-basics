@@ -1,12 +1,20 @@
-import * as fs from "node:fs";
+import fs from "node:fs";
+import { fileURLToPath } from "node:url";
+import path from "node:path";
 import { failFn } from "./utils.js";
 
 const copy = async () => {
   // Write your code here
-  const filesDir = "./files";
-  const filesCopyDir = "./files_copy";
 
-  const isFilesDirPresent = fs.existsSync("./files");
+  const __filename = fileURLToPath(import.meta.url);
+  const __dirname = path.dirname(__filename);
+
+  const filesDir = path.join(__dirname, "files");
+  const filesCopyDir = path.join(__dirname, "files_copy");
+
+  console.log(path.join(__dirname, "files"));
+
+  const isFilesDirPresent = fs.existsSync(filesDir);
   const isFilesCopyDirPresent = fs.existsSync(filesCopyDir);
 
   if (isFilesCopyDirPresent || !isFilesDirPresent) {
